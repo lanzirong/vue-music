@@ -1,32 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <!-- 顶部导航栏 -->
+    <music-navbar class="appnav"></music-navbar>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-#nav {
-  padding: 30px;
-}
+import musicNavbar from "components/context/musicNavbar/MusicNavbar";
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+export default {
+  name: "App",
+  components: {
+    musicNavbar,
+  },
+};
+</script>
+
+<style scoped>
+@import "assets/css/base.css";
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .appnav{
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.7);
+    z-index: 19;
+  }
+  #app {
+    overflow-x: hidden;
+    background-color: #fafafa;
+  }
 </style>
