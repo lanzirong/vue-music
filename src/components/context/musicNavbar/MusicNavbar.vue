@@ -33,7 +33,22 @@ export default {
   methods:{
     itemClick(index){
       this.currentIndex = index;
-      
+      switch (index){
+        case 0:
+          this.$router.push("/myMessage");
+          break;
+        case 1:
+          this.$router.push("/discover");
+          break;
+        case 2:
+          this.$router.push("/cloudVillage");
+          break;
+        case 3:
+          this.$router.push("/video");
+          break;
+        default:
+          break;
+      }
     }
   },
   components: {

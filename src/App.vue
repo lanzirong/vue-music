@@ -2,6 +2,9 @@
   <div id="app">
     <!-- 顶部导航栏 -->
     <music-navbar class="appnav"></music-navbar>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
